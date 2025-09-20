@@ -1,0 +1,15 @@
+# CODEOWNERS file for devops-portfolio
+# This file defines who can review and merge pull requests to the main branch
+
+# Global owners for the entire repository
+* @olehponziuk
+
+# Specific file patterns (optional - you can add more specific rules)
+# /src/ @olehponziuk
+# /docs/ @olehponziuk
+# /.github/ @olehponziuk
+
+# Infrastructure and deployment files
+# /terraform/ @olehponziuk
+# /kubernetes/ @olehponziuk
+# /docker/ @olehponziuk

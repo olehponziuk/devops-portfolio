@@ -1,0 +1,24 @@
+name: Branch Protection Check
+
+on:
+  pull_request:
+    branches: [ main, develop ]
+    types: [ opened, synchronize, reopened ]
+
+jobs:
+  check-approvals:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check PR approvals for develop branch
+        if: github.base_ref == 'develop'
+        run: |
+          echo "Checking approvals for develop branch..."
+          # This workflow will be complemented by GitHub branch protection rules
+          # The actual approval checking is handled by GitHub's native branch protection
+          
+      - name: Check PR approvals for main branch
+        if: github.base_ref == 'main'
+        run: |
+          echo "Checking approvals for main branch..."
+          # Main branch requires CODEOWNERS approval
+          # This is handled by GitHub's CODEOWNERS file and branch protection rules
